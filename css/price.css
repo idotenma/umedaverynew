@@ -1,0 +1,164 @@
+body{
+  margin: 0;
+}
+body > div{
+  /* background: coral; */
+  width: 100%;
+  height: 30px;
+}
+header{
+  /* background-color: aquamarine; */
+  width: 100%;
+  height: 15vh;
+}
+header nav{
+  /* background: green; */
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(100% - 30px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: rgb(196, 195, 195) solid 1px;
+  border-bottom: rgb(196, 195, 195) solid 1px;
+}
+nav ul{
+  list-style: none;
+}
+nav ul a{
+  text-decoration: none;
+}
+nav ul li {
+  color: rgb(136, 135, 135);
+  font-family: 'Times New Roman', Times, serif;
+}
+nav ul li:hover{
+  opacity: .6;
+  cursor: pointer;
+}
+
+main{
+  width: 100%;
+  min-height: 150vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 60px auto;
+}
+main h1{
+  font-family:'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
+}
+main section{
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main h2{
+  margin-top: 100px;
+  color: rgb(100, 98, 98);
+}
+main dl{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px rgb(161, 161, 161);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 24px;
+}
+main p{
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+}
+main h3{
+  color: rgb(138, 136, 136);
+  margin-top: 60px;
+  line-height: 1.8em;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+footer{
+  /* background: cornflowerblue; */
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: rgb(196, 195, 195) solid 1px;
+}
+footer p{
+  color: rgb(180, 179, 178);
+  margin: 0;
+}
+
+.open,
+.back{
+  display: none;
+}
+input[type='checkbox'] {
+  position: absolute;
+  left: -1000px;
+}
+
+@media(max-width: 1000px){
+  body > div{
+    height: 1px;
+  }
+  .open{
+    display: block;
+    height: 50px;
+  }
+  .open img{
+    width: 50px;
+    height: 50px;
+  }
+  header{
+    width: auto;
+    height: auto;
+  }
+  header nav{
+    flex-direction: column;
+    border: none;
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: -300px;
+    transition: all .2s;
+    background: aliceblue;
+  }
+  input[type='checkbox']:checked ~ * nav{
+    left: 0;
+  }
+  input[type='checkbox']:checked ~ * .near{
+    position: absolute;
+    width: 400%;
+    height: 400%;
+    background: rgba(0, 0, 0, .8);
+  }
+  main{
+    min-height: auto;
+  }
+  main section{
+    width: 90%;
+  }
+  main h3{
+    font-size: 40%;
+    margin: 0;
+  }
+  main dl{
+    font-size: 80%;
+  }
+  main p{
+    font-size: 80%;
+  }
+  main .long{
+    font-size: 10px;
+  }
+}
